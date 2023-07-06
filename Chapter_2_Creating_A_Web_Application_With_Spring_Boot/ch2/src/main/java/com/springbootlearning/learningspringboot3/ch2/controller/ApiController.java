@@ -3,6 +3,7 @@ package com.springbootlearning.learningspringboot3.ch2.controller;
 import com.springbootlearning.learningspringboot3.ch2.domain.Video;
 import com.springbootlearning.learningspringboot3.ch2.services.VideoService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,6 +25,7 @@ public class ApiController {
         return videoService.getVideos();
     }
 
+    @PostMapping("/api/videos")
     public Video newVideo(@RequestBody Video newVideo){
         return videoService.create(newVideo);
     }
