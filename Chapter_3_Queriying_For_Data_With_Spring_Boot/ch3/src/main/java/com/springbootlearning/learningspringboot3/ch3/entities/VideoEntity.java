@@ -13,11 +13,11 @@ public class VideoEntity {
 
     private String description;
 
-    protected VideoEntity(){
+    public VideoEntity(){
         this(null,null);
     }
 
-    VideoEntity(String name, String description) {
+    public VideoEntity(String name, String description) {
         this.id = null;
         this.description = description;
         this.name = name;
